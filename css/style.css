@@ -1,0 +1,182 @@
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 3em;
+	height: 1em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #656565;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+	border-radius: 1em;
+}
+
+.slider:before {
+	position: absolute;
+	content: '';
+	height: 1.5em;
+	width: 1.5em;
+	left: -0.25em;
+	bottom: -0.25em;
+	background-color: #434343;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+	border-radius: 50%;
+}
+
+input:checked + .slider {
+	background-color: #ffc66d;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 0 rgba(255, 168, 28, 0.6);
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(2em);
+	-ms-transform: translateX(2em);
+	transform: translateX(2em);
+}
+
+.space {
+	width: 15px;
+}
+
+/* About section style */
+.info,
+.description {
+	position: absolute;
+	left: 5%;
+}
+
+.info {
+	top: 20%;
+	font-size: 2em;
+}
+
+.info-brackets {
+	color: #656565;
+	font-size: 1.2em;
+}
+
+.description {
+	top: 40%;
+	font-size: 2.5em;
+}
+
+.logo {
+	width: 60px;
+	margin: 20px 30px 20px 10px;
+}
+
+/* Hide image on small screens */
+@media only screen and (max-width: 960px) {
+	.myself {
+		background: #434343;
+		margin: 0 15px 30px 15px;
+	}
+
+	.img-fluid,
+	.logo {
+		display: none;
+	}
+	.info,
+	.description {
+		position: inherit;
+		top: 0%;
+		left: 0%;
+		text-align: center;
+		font-size: 2.5em;
+		color: #ffc66d;
+	}
+}
+
+.active {
+	color: #ffc66d;
+}
+
+/* Make SVG unclickable */
+svg {
+	pointer-events: none;
+}
+
+/* Pure CSS Loaders */
+.lds-ellipsis {
+	display: inline-block;
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.lds-ellipsis div {
+	position: absolute;
+	top: 33px;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background: rgb(0, 0, 0);
+	animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+	left: 8px;
+	animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+	left: 8px;
+	animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+	left: 32px;
+	animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+	left: 56px;
+	animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+@keyframes lds-ellipsis3 {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+@keyframes lds-ellipsis2 {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(24px, 0);
+	}
+}
+
+.spinner {
+	position: relative;
+	height: 200px;
+}

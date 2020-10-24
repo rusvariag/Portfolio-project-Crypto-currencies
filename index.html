@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Crypto Repo</title>
+		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/all.min.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<script src="./js/all.min.js"></script>
+		<script src="./js/jquery-3.5.1.min.js"></script>
+		<script src="./js/popper.min.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
+		<script src="./js/highcharts.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<span class="navbar-brand mb-0 h1"><img class="logo" src="./src/Cryptocurrency_Logo.svg" />Crypto Repo</span>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a id="id_home" class="nav-link active" href="#">Home</a>
+						</li>
+						<li class="nav-item">
+							<a id="id_graph" class="nav-link" href="#">Live Reports</a>
+						</li>
+						<li class="nav-item">
+							<a id="id_about" class="nav-link" href="#">About</a>
+						</li>
+					</ul>
+
+					<form id="nav-search" class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+					</form>
+				</div>
+			</nav>
+
+			<main>
+				<div class="alert alert-warning text-center rounded-0 m-0 mt-4">
+					Nothing to report. Please choose up to five crypto coins!
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+
+				<div id="moduleHome" class="row">
+					<div class="lds-ellipsis">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+
+				<div id="moduleGraph" class="mt-4" style="display: none"></div>
+
+				<!-- About module that show author data -->
+				<div id="moduleAuthor" class="container m-0 p-0" style="display: none">
+					<div class="row">
+						<div class="col myself">
+							<div class="info"><span class="info-brackets">[</span><span class="text-uppercase">ivan savin</span><span class="info-brackets">]</span></div>
+							<div class="description">Full-stack Web Developer</div>
+							<img src="./src/author.jpg" class="img-fluid mb-5" alt="author image" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="card col-md-12 col-lg-4 border-0 mb-5">
+							<div class="row">
+								<div class="col-4 text-center"><i class="fas fa-4x fa-user-circle"></i></div>
+								<div class="col-8 d-flex align-items-center">
+									<span class="font-weight-bolder text-uppercase">about me</span>
+								</div>
+								<div class="col-4"></div>
+								<div class="col-8">
+									I am a full-stack web developer always focusing on providing my clients with highest-quality, efficient, modern-looking, responsive websites and web applications.
+								</div>
+							</div>
+						</div>
+
+						<div class="card col-md-12 col-lg-4 border-0 mb-5">
+							<div class="row">
+								<div class="col-4 text-center"><i class="fab fa-4x fa-bitcoin"></i></div>
+								<div class="col-8 d-flex align-items-center">
+									<span class="font-weight-bolder text-uppercase">about project</span>
+								</div>
+								<div class="col-4"></div>
+								<div class="col-8">This Crypto-Project is an example for JavaScript, Jquery, AJAX, Bootstrap, HTML and CSS integration providing responsive user experience.</div>
+							</div>
+						</div>
+
+						<div class="card col-md-12 col-lg-4 border-0 mb-5">
+							<div class="row">
+								<div class="col-4 text-center"><i class="fab fa-4x fa-stumbleupon-circle"></i></div>
+								<div class="col-8 d-flex align-items-center">
+									<span class="font-weight-bolder text-uppercase">buy me a coffee</span>
+								</div>
+								<div class="col-4"></div>
+								<div class="col-8">Are you enjoying the content on this page? Please show your support by buying me a cup of coffee.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<!-- Modal module for case of more than 5 currencies checked-->
+		<div id="modalComponent" class="modal" tabindex="-1" role="dialog" data-backdrop="static">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">You can follow up to 5 Crypto Coins</div>
+					<div id="modalBody" class="modal-body"></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary w-25" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="./js/scripts.js"></script>
+</html>
